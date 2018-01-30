@@ -11,7 +11,6 @@ export class FlickrService {
     constructor(private _http: Http) { };
 
     getResult(query: string) {
-        console.log(query);
         let url = `https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key==${this.key}&user_id==${this.user}&format=json&nojsoncallback=1`;
         return this._http
             .get(url)
